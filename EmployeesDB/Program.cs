@@ -12,13 +12,13 @@ namespace EmployeesDB
         static void Main(string[] args)
         {
             //Console.WriteLine(GetHighlyPaidEmployees());
-            //Console.WriteLine(AddNewAdressForBrown());
-            //Console.WriteLine(ProjectAudit());
+            //Console.WriteLine(AddNewAddressForBrown());
+            Console.WriteLine(ProjectAudit());
             //Console.WriteLine(EmployeeDossier());
             //Console.WriteLine(SmallDepartments());
             //Console.WriteLine(SalaryIncrease());
             //DeleteDepartment(int id);
-            Town404("Berlin");
+            //Town404("Berlin");
         }
         
         //Task 1
@@ -48,7 +48,7 @@ namespace EmployeesDB
         }
 
         //Task 2
-        static string AddNewAdressForBrown()
+        static string AddNewAddressForBrown()
         {
             var addressBrown = new Addresses()
             {

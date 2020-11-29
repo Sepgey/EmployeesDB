@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace EmployeesDB.Data.Models
 {
-    public partial class EmployeesContext : DbContext
+    public class EmployeesContext : DbContext
     {
         public EmployeesContext()
         {
@@ -15,12 +15,12 @@ namespace EmployeesDB.Data.Models
         {
         }
 
-        public virtual DbSet<Addresses> Addresses { get; set; }
-        public virtual DbSet<Departments> Departments { get; set; }
-        public virtual DbSet<Employees> Employees { get; set; }
-        public virtual DbSet<EmployeesProjects> EmployeesProjects { get; set; }
-        public virtual DbSet<Projects> Projects { get; set; }
-        public virtual DbSet<Towns> Towns { get; set; }
+        public DbSet<Addresses> Addresses { get; set; }
+        public DbSet<Departments> Departments { get; set; }
+        public DbSet<Employees> Employees { get; set; }
+        public DbSet<EmployeesProjects> EmployeesProjects { get; set; }
+        public DbSet<Projects> Projects { get; set; }
+        public DbSet<Towns> Towns { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -175,9 +175,7 @@ namespace EmployeesDB.Data.Models
                     .IsUnicode(false);
             });
 
-            OnModelCreatingPartial(modelBuilder);
         }
 
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
